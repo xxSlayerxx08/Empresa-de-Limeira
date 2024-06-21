@@ -1,0 +1,424 @@
+
+/* 
+Regra é um conjunto de propriedades agrupadas em torno de uma tag, 
+classe ou ID
+Propriedades permitem alterar comportamentos de tags, aplicando valores
+de acordo com a sua especialidade.
+A propriedade é composta pelo "nome-da-propriedade:valor;" 
+*/
+
+/* CSS Reset*/
+/* é um caracter curinga que representa todas as tags */
+
+* {
+    margin: 0px;
+    /* margem externa */
+    padding: 0px;
+    /* margem interna */
+    box-sizing: border-box;
+}
+
+/* Redefine o tamanho da fonte roost para facilitar o cálculo em REM */
+html {
+    font-size: 10px;
+}
+
+/* FORMATAÇÃO DAS TAGS PRINCIPAIS */
+
+body {
+    font-family: Arial, Helvetica, sans-serif
+        /* background-color: #bbb;
+    background-image:url(/Imagens/logo.png) ;
+    background-repeat: no-repeat;
+    background-position: center */
+}
+
+h1 {
+    color: #343a40;
+    border-bottom: 2px solid #aaa;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 4.8rem;
+}
+
+h2 {
+    color: #343a40;
+    font-size: 2.8rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #343a40;
+    font-size: 2.4rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.8rem;
+    /* 1.8rem equivale a 18px */
+    line-height: 150%;
+    /*alterar o espaçamento entre linhas*/
+}
+
+/* FORMATAÇÃO DO CABEÇALHO  <header> */
+
+header {
+    background-color: #343a40;
+    padding: 10px 20px 10px 20px;
+    /* top right bottom left */
+}
+
+
+/* formata a tag <a> que está dentro de <header> */
+header a {
+    color: #fff;
+    /* cor da fonte ou letra */
+    text-transform: uppercase;
+    /* caixa alta */
+    text-decoration: none;
+    /* tira o underline */
+    padding-left: 15px;
+    /* margem interna esquerda de cada <a> */
+    font-weight: bold;
+    /* negrito */
+    font-size: 1.6rem;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    width: 1366px;
+    margin: 0px auto 0px auto;
+    /* centraliza */
+    display: flex;
+    /* muda para flexbox */
+    justify-content: space-between;
+    /* distribuir para as margens extremas */
+    align-items: center;
+    /* alinha verticalmente */
+}
+
+nav img {
+    border-radius: 8px;
+    /* Arredondamento dos cantos */
+}
+
+/* FORMATAÇÃO DA SEÇÃO DA IMAGEM DO CABEÇALHO */
+
+/* Para criar classes no CSS, usa-se o (.) mais o nome da classe */
+.imagem_cabeçalho img {
+    width: 100%;
+}
+
+main {
+    width: 1366px;
+    margin: 0px auto 50px auto;
+    min-height: 1000px;
+}
+
+.cards_home {
+    margin-top: 50px;
+    /*margem superior*/
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+
+.card {
+    width: 31%;
+    margin-bottom: 20px;
+    /* espaçamento inferior*/
+    border: 1px solid #bbb;
+    /* largura de estilo e cor*/
+    border-radius: 8px;
+    text-align: center;
+    /*Centralizar o texto */
+
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+    /* ele vai arredondar apenas os cantos superiores*/
+}
+
+.card h3,
+.card p {
+    margin: 10px;
+}
+
+/* FORMATAÇÃO DA PÁGINA INICIAL */
+
+/*FORMATAÇÃO DO RODAPÉ*/
+
+footer {
+    font-size: 1.6rem;
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0px;
+}
+
+footer .footer_content {
+    width: 1366px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+footer .footer_social a {
+    color: #fff;
+    font-size: 2.4rem;
+    margin-right: 10px;
+
+}
+
+footer .footer_social a:hover {
+    color: #007bff;
+}
+
+/*Formatação da página empresa*/
+
+article li {
+    font-size: 1.8rem;
+    line-height: 150%;
+}
+
+article ul,
+article ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+article {
+    display: flex;
+    justify-content: space-between;
+}
+
+article div:first-child {
+    width: 55%;
+    margin-right: 40px;
+}
+
+article div:last-child {
+    width: 45%;
+}
+
+article div img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/*Formatação da galeria de imagens*/
+
+.galeria_destaque {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px 10px 0px;
+    background-color: #333;
+}
+
+.galeria_destaque img {
+    width: 60%;
+}
+
+.galeria_miniaturas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.galeria_miniaturas img {
+    width: 130px;
+}
+
+.galeria_miniaturas img:hover {
+    cursor: pointer;
+    /*altera o cursor*/
+}
+
+/* Formatação de Tabelas */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    font-size: 1.8rem;
+    text-align: start;
+    padding: 10px;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    text-align: end;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    text-align: center;
+}
+
+.tabela1 td {
+    border: 1px solid #aaa;
+}
+
+.tabela2 td {
+    border: 1px solid #bbb;
+}
+
+.tabela2 th {
+    border-bottom: 3px solid #333;
+}
+
+.tabela3 tr:nth-child(odd) {
+    background-color: #ccc;
+}
+
+.tabela3 th {
+    background-color: #333;
+    color: #fff;
+}
+
+/*formatação do formulário*/
+
+/*formatação de um id*/
+
+#form1 {
+    font-size: 1.8rem;
+}
+
+#form1 div {
+    margin-top: 20px;
+}
+
+#form1 label {
+    display: block;
+    text-transform: uppercase;
+}
+
+#form1 input[type=text],
+#form1 input[type=email],
+#form1 textarea
+{
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 7px;
+    width: 70%;
+}
+
+#form1 select{
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 7px;
+}
+
+#form1 input[type=submit]{
+    border-style: none;
+    background-color: #1a5491;
+    color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#form1 input[type=submit]:hover{
+    background-color: #000;
+}
+
+/*media queries*/
+@media screen and (max-width:1000px) {
+    nav {
+        width: 100%;
+        display: block;
+    } 
+    
+    nav span{
+        display: block;
+    }
+
+    nav span:last-child{
+        margin-top: 10px;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header img {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+
+    footer .footer_content {
+        width: 100%;
+    }
+
+    .cards_home {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    .card {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    article {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+    }
+    
+    article div:first-child {
+        width: 100%;
+        margin-right: 40px;
+    }
+    
+    article div:last-child {
+        width: 100%;
+    }
+
+    .galeria_miniaturas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        column-gap: 1px;
+        row-gap: 5px;
+    }
+    
+    .galeria_miniaturas img {
+        width: 24%;
+    }
+
+    iframe{
+        width: 100%;
+        height: 300px;
+    }
+
+    #form1 input[type=text],
+#form1 input[type=email],
+#form1 textarea
+{
+    width: 100%;
+}
+
+}
